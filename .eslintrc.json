@@ -23,7 +23,8 @@
         "printWidth": 100,
         "tabWidth": 2,
         "useTabs": false,
-        "semi": false
+        "semi": false,
+        "singleQuote": true
       }
     ],
     "import/order": [
