@@ -16,8 +16,6 @@ interface Rocket {
 
 interface RocketStore {
   rockets: Rocket[]
-  loading: boolean
-  error: string | null
   addRocket: (rocket: Omit<Rocket, 'id'>) => void
   deleteRocket: (id: string) => void
   editRocket: (editedRocket: Omit<Rocket, 'user'>) => void
@@ -25,8 +23,6 @@ interface RocketStore {
 
 export const useRocketStore = create<RocketStore>((set) => ({
   rockets: [],
-  loading: false,
-  error: null,
   addRocket: (rocket) =>
     set((state) => ({
       rockets: [...state.rockets, { id: nanoid(), ...rocket }],
